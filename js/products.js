@@ -55,7 +55,7 @@ let products = [
   }
 ];
 
-localStorage.setItem('products', JSON.stringify(products))
+// localStorage.setItem('products', JSON.stringify(products))
 // =======================Get-index==========================
 
 let productLength = products.length;
