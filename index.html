@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="leftside">
+        <img src="images/logo.jpg" alt="image" class="logo">
+        <ul class="manu">
+            <li class="active">
+                <a href="#">
+                    <i class="material-icons">dashboard</i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="./pages/category.html">
+                    <i class="material-icons">view_comfy</i>
+                    <span>Category</span>
+                </a>
+            </li>
+            <li>
+                <a href="./pages/products.html">
+                    <i class="material-icons">redeem</i>
+                    <span>Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="./pages/order.html">
+                    <i class="material-icons">queue_play_next</i>
+                    <span>Order</span>
+                </a>
+            </li>
+            <li>
+                <a href="./pages/cart.html">
+                    <i class="material-icons">add_shopping_cart</i>
+                    <span>Cart</span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="#">
+                    <i class="material-icons">exit_to_app</i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="main-header">
+            <div class="header-title">
+                <i class="material-icons">local_grocery_store</i>
+                <h2>POS SYSTEM</h2>
+            </div>
+            <div class="user-info">
+                <div class="search-box">
+                    <i class="material-icons">search</i>
+                    <input type="search" class="search-box" placeholder="Search product here..................">
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <h3 class="main-title">Top 4 sold product</h3>
+            <div class="card-payment">
+
+                <div class="payments light-red">
+                    <div class="card-header">
+                        <div class="amnout">
+                            <span class="title">
+                                TOTAL PRICE
+                            </span>
+                            <span class="amount-price instock">instocks</span>
+                        </div>
+                        <i class="material-icons icon">monetization_on</i>
+                    </div>
+                    <span class="card-detail">**** **** **** 4444</span>
+                </div>
+
+                <div class="payments light-purple">
+                    <div class="card-header">
+                        <div class="amnout">
+                            <span class="title">
+                                SELL HISTORY
+                            </span>
+                            <span class="amount-price category">category</span>
+                        </div>
+                        <i class="material-icons icon dark-purple">monetization_on</i>
+                    </div>
+                    <span class="card-detail">**** **** **** 5555</span>
+                </div>
+
+                <div class="payments light-green">
+                    <div class="card-header">
+                        <div class="amnout">
+                            <span class="title">
+                                SOLD OUT QUANTITIES
+                            </span>
+                            <span class="amount-price sold_out">300</span>
+                        </div>
+                        <i class="material-icons icon dark-green">monetization_on</i>
+                    </div>
+                    <span class="card-detail">**** **** **** 6666</span>
+                </div>
+
+                <div class="payments light-teal">
+                    <div class="card-header">
+                        <div class="amnout">
+                            <span class="title">
+                                BEST SELLING PRODUCTS
+                            </span>
+                            <span class="amount-price qt_computer">ASUS</span>
+                        </div>
+                        <i class="material-icons icon dark-teal">laptop_mac</i>
+                    </div>
+                    <span class="card-detail">**** **** ****7777</span>
+                </div>
+                <div class="payments light-pink">
+                    <div class="card-header">
+                        <div class="amnout">
+                            <span class="title">
+                                LOW-STOCK
+                            </span>
+                            <span class="amount-price qt_soldOut">DELL</span>
+                        </div>
+                        <i class="material-icons icon dark-pink">important_devices</i>
+                    </div>
+                    <span class="card-detail">**** **** **** 8888</span>
+                </div>
+                
+                <div class="payments light-blue">
+                    <div class="card-header">
+                        <div class="amnout">
+                            <span class="title">
+                                INCOMES COST
+                            </span>
+                            <span class="amount-price income">$1999</span>
+                        </div>
+                        <i class="material-icons icon dark-blue">monetization_on</i>
+                    </div>
+                    <span class="card-detail">**** **** **** 9999</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

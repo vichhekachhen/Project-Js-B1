@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+
+}
+
+.leftside {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 120vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: #0a266b;
+}
+
+.leftside:hover {
+    width: 240px;
+    transition: 0.5s;
+}
+
+.logo {
+
+    margin-top: 10px;
+    width: 50px;
+    border-radius: 50%;
+
+}
+
+.manu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.manu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.manu li:hover {
+    background-color: #5e0d0d58;
+    border: 2px solid goldenrod;
+}
+
+.manu a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.manu a span {
+    overflow: hidden;
+}
+
+.manu a i {
+    font-size: 1.2rem;
+}
+
+.logout {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+}
+
+/* --------- content section --------- */
+
+.main-content {
+    position: relative;
+    background-color: #eae9eb;
+    width: 100%;
+    padding: 1rem;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #0a266b;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header-title {
+    color: #fff;
+    display: flex;
+    gap: 10px;
+
+}
+
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1;
+}
+
+.user-info img {
+    border: 1px solid black;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    margin-left: 5px;
+}
+
+.search-box {
+    background: rgb(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+
+.search-box input {
+    background-color: transparent;
+    padding: 10px;
+}
+
+.search-box i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.search-box i:hover {
+    transform: scale(1.2);
+}
+
+/********** card container **********/
+
+.card-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+
+}
+
+.card-payment {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-left: 40px;
+}
+
+.main-title {
+    color: rgba(113, 99, 186, 255);
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.payments {
+    background: rgb(229, 223, 223);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+.payments:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title {
+    font-size: 12px;
+    font-weight: 200;
+
+}
+
+.amount-price {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.icon {
+    color: #fff;
+    padding: 1rem;
+    height: 55px;
+    width: 60px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    background: red;
+}
+
+.card-detail {
+    font-size: 18px;
+    color: #777777;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.light-red {
+    background: rgb(251, 233, 233);
+}
+
+.light-purple {
+    background: rgb(254, 226, 254);
+}
+
+.light-green {
+    background: rgb(235, 226, 235);
+}
+
+.light-blue {
+    background: rgb(236, 236, 254);
+}
+.light-pink {
+    background: rgb(254, 225, 249);
+}
+.light-teal {
+    background: rgb(221, 244, 244);
+}
+
+.dark-red {
+    background: red;
+}
+
+.dark-purple {
+    background: purple;
+}
+
+.dark-green {
+    background: green;
+}
+
+.dark-blue {
+    background: blue;
+}
+.dark-pink {
+    background: rgb(255, 93, 123);
+}
+.dark-teal {
+    background: teal;
+}
