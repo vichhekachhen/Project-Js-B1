@@ -17,7 +17,7 @@ body {
     left: 0;
     bottom: 0;
     width: 110px;
-    height: 120vh;
+    height: 100vh;
     padding: 0 1.7rem;
     color: #fff;
     overflow: hidden;
@@ -57,7 +57,7 @@ body {
 
 .manu a {
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -67,17 +67,14 @@ body {
 
 .manu a span {
     overflow: hidden;
+    margin-left: -10px;
+    margin-bottom: -2px;
 }
 
-.manu a i {
-    font-size: 1.2rem;
-}
-
-.logout {
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    width: 100%;
+.manu i {
+    font-size: 1.5rem;
+    margin-left: -5px;
+    
 }
 
 /* --------- content section --------- */
@@ -228,7 +225,7 @@ body {
 }
 
 .sort_price {
-    margin-left: 10%;
+    margin-left: 7%;
 }
 
 .search_container select {
