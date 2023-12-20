@@ -23,7 +23,6 @@ let loadStorge = () => {
     if (cart_storage !== null) {
         cart = cart_storage;
     }
-    checkCartItem();
 }
 
 //  ===== Check cart has items or not====
@@ -87,13 +86,13 @@ let dispalyProduct = () => {
         btnDetail.type = "button";
         btnDetail.textContent = "Detail";
         btnDetail.addEventListener("click", showDetail)
-        // btnAddCart 
-        let btnAddCart = document.createElement("button");
-        btnAddCart.type = "button";
-        btnAddCart.textContent = "Add cart";
-        btnAddCart.addEventListener("click", addCart);
+        // btnDelete 
+        let btnDelete = document.createElement("button");
+        btnDelete.type = "button";
+        btnDelete.textContent = "Delete";
+        btnDelete.addEventListener("click", deleteCart);
         // appendChild to card_button
-        card_button.append(btnDetail, btnAddCart);
+        card_button.append(btnDetail, btnDelete);
         // appendChild to card_footer 
         card_footer.append(card_title, card_rate, card_button);
         // appen all child to card 
@@ -248,12 +247,24 @@ let addCart = (event) => {
         cart.push(newCart);
         saveCart();
     }
-    // else if (products[index].title != event_title) {
-    //     cart.push(newCart);
-    //     saveCart();
-    // }
-    location.reload();
+
 }
+// ======= Delete card=======
+
+let deleteCart = (event) => {
+    const removeConfirm = window.confirm("Are you sure you want to remove this product?");
+    if (removeConfirm) {
+        const index = event.target.parentElement.parentElement.parentElement.dataset.index;
+        // Remove product from products array
+        products.splice(index, 1);
+        // Save updated products array to local storage
+        saveData();
+        // Remove card from display
+        event.target.parentElement.parentElement.parentElement.remove();
+        // Update the cart count
+        checkCartItem();
+    }
+};
 
 // ====== Function save data() need to turn off before we add new product==
 // saveData();
