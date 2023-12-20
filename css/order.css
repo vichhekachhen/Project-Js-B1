@@ -17,8 +17,8 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 110px;
-    height: 120vh;
+    width: 100px;
+    height: 400vh;
     padding: 0 1.7rem;
     color: #fff;
     overflow: hidden;
@@ -36,7 +36,6 @@ body {
     margin-top: 10px;
     width: 50px;
     border-radius: 50%;
-
 }
 
 .manu {
@@ -65,7 +64,6 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-
 }
 
 .manu a span {
@@ -74,16 +72,15 @@ body {
     margin-bottom: -2px;
 }
 
-.manu i {
+.manu a i {
     font-size: 1.5rem;
-    margin-left: -5px;
 }
 
 .logout {
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 20px;
+    width: 5%;
 }
 
 /* --------- content section --------- */
@@ -151,9 +148,6 @@ body {
 .search-box i:hover {
     transform: scale(1.2);
 }
-
-
-
 .main-content .cart{
     height: 100vh;
 }
@@ -166,7 +160,6 @@ body {
     width: 70%;
     margin-left: 3%;
     border: none;
-    /* border-radius: 10px; */
     box-shadow: 0 1px 10px rgb(176, 169, 169);
 }
 thead tr{
@@ -174,12 +167,10 @@ thead tr{
     background: #136b9ec1;
     color: white;
     border-radius: 20px;
-    /* border: 2px solid rgb(19, 37, 156); */
 }
 .cart_container table td,
 .cart_container table th{
     border: 2px solid#aeaeae76;
-   
     text-align: center;
     font-weight: bold;
     padding: 10px;
