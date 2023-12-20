@@ -17,7 +17,7 @@
     left: 0;
     bottom: 0;
     width: 110px;
-    height: 120vh;
+    height: 100vh;
     padding: 0 1.7rem;
     color: #fff;
     overflow: hidden;
@@ -76,12 +76,6 @@
     margin-left: -5px;
   }
   
-  .logout {
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    width: 100%;
-  }
   
   /* --------- content section --------- */
   
