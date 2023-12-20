@@ -261,8 +261,7 @@ let deleteCart = (event) => {
         saveData();
         // Remove card from display
         event.target.parentElement.parentElement.parentElement.remove();
-        // Update the cart count
-        checkCartItem();
+        
     }
 };
 
