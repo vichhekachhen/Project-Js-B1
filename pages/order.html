@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>Order page</title>
+    <link rel="stylesheet" href="../css/order.css">
+    <script src="../js/order.js" defer></script>
+
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="leftside">
+        <img src="../images/logo.jpg" alt="image" class="logo"></img>
+        <ul class="manu">
+            <li class="active">
+                <a href="../index.html">
+                    <i class="material-icons">dashboard</i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="/pages/category.html">
+                    <i class="material-icons">view_comfy</i>
+                    <span>Category</span>
+                </a>
+            </li>
+            <li>
+                <a href="/pages/products.html">
+                    <i class="material-icons">redeem</i>
+                    <span>Products</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/pages/cart.html">
+                    <i class="material-icons">add_shopping_cart</i>
+                    <span>Cart</span>
+                </a>
+            </li>
+            <li class="order">
+                <a href="#">
+                    <i class="material-icons">queue_play_next</i>
+                    <span>Order</span>
+                </a>
+            </li>
+
+            <li class="logout">
+                <a href="#">
+                    <i class="material-icons">exit_to_app</i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="main-header">
+            <div class="header-title">
+                <i class="material-icons">local_grocery_store</i>
+                <h2>POS SYSTEM</h2>
+            </div>
+            <div class="user-info">
+                <div class="search-box">
+                    <i class="material-icons">search</i>
+                    <input type="search" class="search-box" placeholder="Search product here..................">
+                </div>
+            </div>
+        </div>
+        <div class="table_cart">
+            <div class="cart_container">
+                <table>
+                    <thead>
+                        <tr>
+                            <!-- <th>ID</th> -->
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+                </table>
+    
+                <div class="total_price">
+                    <div class="total">
+                        <p>Total price: <b>600</b></p>
+                        <p>Discount: <b>$0</b></p>
+                    </div>
+                    <div class="card_button">
+                        <button type="button"><a href="../pages/cart.html">BACK</a></button>
+                        <button type="button" onclick="checkOut()">CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
