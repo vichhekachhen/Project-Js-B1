@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add product</title>
+    <title>Add Product</title>
     <link rel="stylesheet" href="../css/products.css">
     <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,62 +12,77 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../js/products.js" defer></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav>
-            <div class="logo">
-                <img src="/images/logo.jpg" alt="">
-                <h3>Pos system</h3>
-            </div>
-            <div class="search">
-                <div class="icon-search">
-                    <i class="material-icons">search</i>
-                </div>
-                <input type="search" class="search-box" placeholder="Search product here..................">
-                <button class="btn-search">Search</button>
-            </div>
-            <div class="user">
-                <i class="material-icons">add_shopping_cart</i>
-                <i class="material-icons">person_pin</i>
-            </div>
-        </nav>
-        <main class="content">
-            <div class="main_left">
-                <div class="icon">
+    <div class="leftside">
+        <img src="../images/logo.jpg" alt="image" class="logo"></img>
+        <ul class="manu">
+            <li class="active">
+                <a href="../index.html">
                     <i class="material-icons">dashboard</i>
-                    <a href="../index.html" class="board">Dashboard</a>
-                </div>
-                <div class="icon">
-                    <i class="material-icons">redeem</i>
-                    <a href="#" class="board">Products</a>
-                </div>
-                <div class="icon">
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="/pages/category.html">
                     <i class="material-icons">view_comfy</i>
-                    <a href="#" class="board">Category</a>
-                </div>
-                <div class="icon">
+                    <span>Category</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="material-icons">redeem</i>
+                    <span>Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="./cart.html">
                     <i class="material-icons">add_shopping_cart</i>
-                    <a href="#" class="board">Order</a>
+                    <span>Cart</span>
+                </a>
+            </li>
+            <li>
+                <a href="/pages/order.html">
+                    <i class="material-icons">queue_play_next</i>
+                    <span>Order</span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="../index.html">
+                    <i class="material-icons">exit_to_app</i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="main-header">
+            <div class="header-title">
+                <i class="material-icons">local_grocery_store</i>
+                <h2>POS SYSTEM</h2>
+            </div>
+            <div class="user-info">
+                <div class="search-box">
+                    <i class="material-icons">search</i>
+                    <input type="search" class="search" placeholder="Search product here....">
                 </div>
             </div>
-        </main>
+        </div>
         <section class="product_container">
             <div class="product_view">
-                <!-- For create Products -->
+                <!--Create button add Products -->
                 <button id="add_product" onclick="onAddProduct()">
                     ➕Add Product
                 </button>
                 <div id="products_container">
-                    <!-- TO CREATE CARD OF EACH PRODUCT -->
-                    <!-- <div class="card" data-index="0">
+                <!-- Create Products -->
+                <!-- <div class="card" data-index="0">
             <div class="product_info">
-              <img src="../../images/macBook.png" alt="">
+              <img src="../images/macBook.png" alt="">
               <div class="detail">
                 <span class="name">Apple Pro MAx</span>
                 <span class="type">Mac Book</span>
-                <span class="description">Mac</span>
-                <span class="price">999.99$</span>
+                <span class="description">Core i9 ...</span>
+                <span class="price">1999.99$</span>
               </div>
             </div>
             <div class="actions">
@@ -157,9 +171,6 @@
             </div>
         </dialog>
     </div>
-    <footer>
-
-    </footer>
     </div>
 </body>
 
