@@ -5,32 +5,57 @@ let info = document.querySelectorAll('.info-form');
 let products = [
   {
     id :1,
-    name: 'MAC BOOK Pro',
+    name: 'Apple',
     price: 1989.99,
     currency: '$',
-    brand: 'Apple',
+    type: 'Apple',
+    star: 4,
     description: 'Core i7,RAM 16GB,Core 10, Thread 20, SSD 512GB',
-    image: 'https://i.insider.com/5eea335daee6a8642c5f3894?width=700',
+    image: 'https://purepng.com/public/uploads/large/purepng.com-macbookmacbooknotebookcomputersapple-inmacbook-familyapple-laptops-1701528360184gi0qt.png',
   },
   {
     id :2,
     name: 'ASUS ROG strix',
-    price: 1967.94,
+    price: 1767.94,
     currency: '$',
-    brand: 'ASUS',
+    type: 'ASUS',
+    star: 4,
     description: 'Core i7,Processor AMD Ryzen 9, RAM 16GB,',
-    image: 'https://dlcdnwebimgs.asus.com/gain/015AB703-5A42-4307-A219-31927FB70CE8/w250'
+    image: 'https://dlcdnwebimgs.asus.com/gain/3BF8E8FB-3ABB-4DE1-92C6-210B28AC331A'
   },
   {
     id :3,
     name: 'ASUS Gaming',
     price: 1600.99,
     currency: '$',
-    brand: 'ASUS',
+    type: 'ASUS',
+    star: 4,
     description: 'Core i7,RAM 16GB,Core 10, Thread 20, SSD 512GB',
-    image: 'https://w7.pngwing.com/pngs/1006/751/png-transparent-dell-latitude-laptop-intel-core-dell-inspiron-book-store-electronics-gadget-netbook-thumbnail.png'
+    image: 'https://dlcdnwebimgs.asus.com/gain/6F38685C-B871-4045-9B76-D17818B6D948'
+  },
+  {
+    id :4,
+    name: 'Dell',
+    price: 850.99,
+    currency: '$',
+    type: 'DELL',
+    star: 4,
+    description: 'Core i7,RAM 16GB,Core 10, Thread 20, SSD 512GB',
+    image: 'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-3440-laptop/media-gallery/notebook-latitude-14-3440-nt-uma-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=664&qlt=100,1&resMode=sharp2&size=664,402&chrss=full'
+  },
+  {
+    id :5,
+    name: 'Acer',
+    price: 1600.99,
+    currency: '$',
+    type: 'ACER',
+    star: 4,
+    description: 'Core i7,RAM 16GB,Core 10, Thread 20, SSD 512GB',
+    image: 'https://parspng.com/wp-content/uploads/2023/02/laptoppng.parspng.com-2.png'
   }
 ];
+
+localStorage.setItem('products', JSON.stringify(products))
 // =======================Get-index==========================
 
 let productLength = products.length;
@@ -42,16 +67,16 @@ let show = (element) => {
   element.style.display = "block";
 };
 // =======================Local-Storage==========================
-let saveProducts = () => {
-  localStorage.setItem('products', JSON.stringify(products));
-};
-
-let loadProducts = () => {
-  let productStorage = JSON.parse(localStorage.getItem('products'));
-  if (productStorage !== null) {
-    products = productStorage;
+function loadProducts(){
+  let loaded = localStorage.getItem("products")
+  if(loaded===null){
+    products=products
+  }else{
+    products=JSON.parse(loaded)
   }
-};
+  localStorage.setItem("products",JSON.stringify(products))
+}
+loadProducts()
 //===============================Edit-Product=====================
 let renderProducts = () => {
   let dom_product_container = document.querySelector('#products_container');
@@ -77,15 +102,15 @@ let renderProducts = () => {
     let detail = document.createElement('div');
     detail.className = 'detail';
     productInfo.appendChild(detail);
-    //Brand name
+    //type name
     let names = document.createElement('p');
     names.className = 'name';
-    names.textContent = 'Brand : ' +product.name + ' ' + product.brand;
+    names.textContent = 'type : ' +product.name ;
     detail.appendChild(names);
 
     let type = document.createElement('p');
     type.className = 'type';
-    type.textContent = 'Type® : ' + product.brand + ' ' ;
+    type.textContent = 'Type® : ' + product.type + ' ' ;
     detail.appendChild(type);
 
     //Detailing more information
@@ -175,7 +200,6 @@ let removeProduct = (event) => {
     products.splice(index, 1);
 
     // save to local storage
-    saveProducts();
 
     // update the view
     renderProducts();
@@ -222,6 +246,7 @@ let manageInfo = (indexInfo, action) => {
 let onCancel = (e) => {
   hide(product_box);
 }
+// ______________________
 let onCreateProduct = () => {
   let product_name = document.getElementById('name').value;
   let product_type = document.getElementById('type').value;
@@ -234,6 +259,7 @@ let onCreateProduct = () => {
     description: product_description,
     price: product_price,
     currency: currency,
+    star: 4,
     image: imgeUpload
   }
   imgeUpload = ''
@@ -251,7 +277,9 @@ let onCreateProduct = () => {
     }
     hide(product_box);
     //save to local storage
-    saveProducts();
+    localStorage.setItem('products', JSON.stringify(products))
+    // saveProducts();
+    
     // update to the view
     renderProducts()
     // clear input 
@@ -294,11 +322,11 @@ let loadFile=(event)=>{
   });
   reader.readAsDataURL(file);
 }
-saveProducts()
+// saveProducts()
 loadProducts();
 renderProducts();
 
-let searchProduct = document.querySelector('.search input');
+let searchProduct = document.querySelector('.search-box input');
 searchProduct.addEventListener('keyup', onSearchProduct)
 let btn_add = product_view.querySelector('#add_product');
 btn_add.addEventListener('click', onAddProduct);
