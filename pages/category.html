@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+    <link rel="stylesheet" href="../css/category.css">
+    <script src="../js/category.js" defer></script>
+    <!-- <script src="../js/products.js" defer></script> -->
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="leftside">
+        <img src="../images/logo.jpg" alt="image" class="logo"></img>
+        <ul class="manu">
+            <li class="active">
+                <a href="../index.html">
+                    <i class="material-icons">dashboard</i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="material-icons">view_comfy</i>
+                    <span>Category</span>
+                </a>
+            </li>
+            <li>
+                <a href="../pages/products.html">
+                    <i class="material-icons">redeem</i>
+                    <span>Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="/pages/cart.html" class="active">
+                    <i class="material-icons">add_shopping_cart</i>
+                    <span>Cart</span>
+                    <div class="number"></div>
+                </a>
+            </li>
+            <li>
+                <a href="../pages/order.html">
+                    <i class="material-icons">queue_play_next</i>
+                    <span>Order</span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="../index.html">
+                    <i class="material-icons">exit_to_app</i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="main-header">
+            <div class="header-title">
+                <i class="material-icons">local_grocery_store</i>
+                <h2>POS SYSTEM</h2>
+            </div>
+            <div class="user-info">
+                <div class="search-box">
+                    <i class="material-icons">search</i>
+                    <input type="search" name="search" id="search" onkeyup="search()"
+                        placeholder="Search product here..">
+                </div>
+            </div>
+        </div>
+        <div class="store_banner">
+            <div class="search_container">
+                <div class="sort_price">
+                    <select name="categories" id="string" onchange="sort()">
+                        <option disabled selected>Categories</option>
+                        <option value="">All products</option>
+                        <option value="Apple">Mackbook</option>
+                        <option value="Acer">Acer</option>
+                        <option value="ASUS">Asus</option>
+                        <option value="Dell">Dell</option>
+                        <option value="Lenovo">Lenovo</option>
+                        <option value="HP">HP</option>
+                        <option value="Latitude">Latitude</option>
+                    </select>
+                </div>
+                <button id="add_product" onclick="onAddProduct()">
+                    ➕Add Product
+                </button>
+            </div>
+            <h1 class="header"></h1>
+        </div>
+        <!-- ===== All products =====-->
+        <div class="card_container">
+
+        </div>
+        <div class="detail" style="display: none;">
+            <div class="product_form" style="display: none;">
+                <dialog open>
+                    <header>Create a new Product</header>
+                    <div class="form_container">
+                        <section>
+                            <div class="form_content">
+                                <label for="">Name:</label>
+                                <div class="inputField">
+                                    <input type="text" class="requiredField" id="name" placeholder="Product's name..." required>
+                                    <div class="info-form">
+                                        <span class="material-symbols-outlined"> info </span>
+                                        <span>Please enter product name</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_content">
+                                <label for="">Type:</label>
+                                <div class="inputField">
+                                    <select type="text" class="requiredField" id="type" placeholder="Product's Type..."
+                                        required>
+                                        <option value="no" selected disabled>Choose your Model type</option>
+                                        <option value="Apple">APPLE</option>
+                                        <option value="DELL">DELL</option>
+                                        <option value="ACER">ACER</option>
+                                        <option value="LENOVO">LENOVO</option>
+                                        <option value="ASUS">ASUS</option>
+                                        <!-- <option value="MSI">MSI</option> -->
+                                    </select>
+                                    <div class="info-form">
+                                        <span class="material-symbols-outlined"> info </span>
+                                        <span>Please enter type</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="form_content">
+                                <label for="">Price:</label>
+                                <div class="inputField">
+                                    <input type="number" class="requiredField" id="productPrice"
+                                        placeholder="Product's Price..." required>
+                                    <div class="info-form">
+                                        <span class="material-symbols-outlined"> info </span>
+                                        <span>Please enter price</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_content">
+                                <label for="">Currency:</label>
+                                <div class="inputField">
+                                    <select name="" id="currency" class="requiredField">
+                                        <option value="no" selected disabled>Choose product's price</option>
+                                        <option value="$">$</option>
+                                        <option value="៛">€</option>
+                                        <option value="៛">៛</option>
+                                    </select>
+                                    <div class="info-form">
+                                        <span class="material-symbols-outlined"> info </span>
+                                        <span>Choose a currency</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="form_content">
+                            <label for=""><b>Description:</b></label>
+                            <textarea name="" id="text" placeholder="Product Details"></textarea>
+                        </div>
+                        <div class="form_content">
+                            <label for=""><b>Product image:</b></label>
+                            <input type="file" id="productImage" class="upload" accept="image/*" onchange="loadFile(event)">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button onclick="onCancel()">Cancel</button>
+                        <button id="createEditButton" onclick="onCreateProduct()">Create</button>
+                    </div>
+                </dialog>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
