@@ -128,16 +128,16 @@ let renderProducts = () => {
     let action = document.createElement('div');
     action.className = 'actions';
     // create a new img for button update and delete
-    let btn_update = document.createElement('img');
-    btn_update.dataset.index = index;
-    btn_update.src = '../images/edit.png';
-    btn_update.addEventListener('click', updateProduct)
-    action.appendChild(btn_update);
+    let bgUpdate = document.createElement('img');
+    bgUpdate.dataset.index = index;
+    bgUpdate.src = '../images/edit.png';
+    bgUpdate.addEventListener('click', updateProduct)
+    action.appendChild(bgUpdate);
 
-    let btn_delete = document.createElement('img');
-    btn_delete.src = '../images/delete.png';
-    btn_delete.addEventListener('click', removeProduct)
-    action.appendChild(btn_delete)
+    let bgDelete = document.createElement('img');
+    bgDelete.src = '../images/delete.png';
+    bgDelete.addEventListener('click', removeProduct)
+    action.appendChild(bgDelete)
     card.appendChild(productInfo);
     card.appendChild(action)
     dom_product_container.appendChild(card);
